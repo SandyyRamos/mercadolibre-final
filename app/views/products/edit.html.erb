@@ -1,0 +1,13 @@
+<h1 class="text-center">Edit Products</h1>
+<div class="w-50 container shadow mt-3 p-5">
+<%=simple_form_for @product do |f|%>
+<%=f.input :name%>
+<%=f.input :price%>
+<%=f.input :discount%>
+<%=f.input :stock%>
+<%=f.input :status%>
+<%=f.association :category%>
+<%=f.input :photos, as: :file, input_html:{multiple:true}%>
+<%=f.submit "Edit producto", class:"btn btn-primary w-100"%>
+<%end%>
+</div>
